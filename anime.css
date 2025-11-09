@@ -1,0 +1,454 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Base */
+body {
+    background: rgba(0, 0, 0, 0.93);
+    color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+main {
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Grid Lines */
+main::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 70px 70px;
+    z-index: 0;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    width: 25rem;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: skyblue;
+    filter: blur(200px);
+    z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+    height: 14vh;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.classlist {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navlinks {
+    border: 2px solid #8113ff60;
+    padding: 0.4rem 1rem;
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.navlinks:hover {
+    background-color: blue;
+}
+
+.nav-btn {
+    padding: 0.6rem 1.4rem;
+    background: purple;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #a020f0;
+    box-shadow: 0 0 10px #a020f0;
+    transform: scale(1.05);
+}
+
+#moon {
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: white;
+    color: purple;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+/* Moon Hover Effect */
+#moon:hover {
+    transform: rotate(25deg);
+    box-shadow: 0 0 12px #a020f0;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.fa-bars {
+    font-size: 1.6rem;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: calc(100vh - 14vh);
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 19rem;
+    font-family: "Corinthia", cursive;
+    position: relative;
+    z-index: 2;
+}
+
+h1::after {
+    content: "full stack developer";
+    position: absolute;
+    font-size: 20px;
+    letter-spacing: 4px;
+    bottom: 17%;
+    right: -15%;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
+img {
+    width: 580px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+p {
+    font-size: 0.95rem;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    max-width: 370px;
+    color: white;
+    letter-spacing: 0.036rem;
+    z-index: 2;
+}
+
+/* Social Icons */
+.socialicons {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 2;
+}
+
+.icons {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: purple;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.icons:hover {
+    transform: translateX(25%);
+}
+
+.fa-brands {
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #111, #1c1c1c);
+    color: white;
+    position: relative;
+    z-index: 3;
+}
+
+.contact-section h2 {
+    font-size: 2.2rem;
+    color: #a020f0;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.contact-info i {
+    color: #a020f0;
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: #a020f0;
+    text-decoration: none;
+}
+
+.contact-buttons {
+    margin-top: 20px;
+}
+
+.email-btn {
+    background-color: #a020f0;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.email-btn:hover,
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px currentColor;
+}
+
+/* Footer */
+.pro-footer {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;
+    text-align: center;
+    padding: 25px 15px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-brand {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer-socials a:hover {
+    background: #a020f0;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Light Theme (toggle with JS) */
+body.theme {
+    background: #fdfdfd;
+    color: #111;
+    transition: all 0.5s ease;
+}
+
+body.theme main::after {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+body.theme .navlinks {
+    border-color: #aaa;
+    color: #111;
+}
+
+body.theme .navlinks:hover {
+    background: #a020f0;
+    color: white;
+}
+
+body.theme .nav-btn {
+    background: #a020f0;
+    color: white;
+}
+
+body.theme #moon {
+    background: #a020f0;
+    color: white;
+}
+
+body.theme .contact-section {
+    background: linear-gradient(135deg, #f3f3f3, #fff);
+    color: #111;
+}
+
+body.theme .contact-section h2 {
+    color: #a020f0;
+}
+
+body.theme .contact-section p {
+    color: #333;
+}
+
+body.theme .pro-footer {
+    background: #ddd;
+    color: #333;
+}
+
+body.theme .footer-socials a {
+    background: #333;
+    color: white;
+}
+
+body.theme .footer-socials a:hover {
+    background: #a020f0;
+}
+
+/* Cursor pointer for clickable elements */
+a,
+button,
+.nav-btn,
+.icons,
+.footer-socials a,
+.hamburger,
+#moon {
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+    .classlist {
+        flex-direction: column;
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.432);
+        backdrop-filter: blur(10px);
+        width: 20rem;
+        padding-block: 3rem;
+        z-index: 4;
+        gap: 3rem;
+        border-radius: 2rem;
+        transition: 0.3s ease-in-out;
+    }
+
+    .classlist-active {
+        top: 70%;
+        left: 50%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    h1 {
+        font-size: 6rem;
+        position: absolute;
+        top: -3%;
+    }
+
+    h1::after {
+        font-size: 10px;
+        position: absolute;
+        bottom: -99%;
+        left: 100px;
+        right: auto;
+    }
+
+    .hero-section {
+        align-items: flex-start;
+    }
+
+    img {
+        width: 20rem;
+    }
+
+    p {
+        top: 5%;
+        left: 5%;
+        font-size: 0.9rem;
+    }
+}
