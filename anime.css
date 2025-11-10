@@ -411,6 +411,29 @@ button,
         transition: 0.3s ease-in-out;
     }
 
+    #img1 {
+        margin-bottom: 300px;
+
+    }
+
+    .socialicons {
+        margin-bottom: 270px;
+    }
+
+    .pro-footer {
+        position: relative;
+        top: -230px;
+    }
+
+    #contact {
+        position: relative;
+        top: -230px;
+
+        /* margin-bottom: 500px; */
+        /* margin-top: 200px; */
+
+    }
+
 
 
 
