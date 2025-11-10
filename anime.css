@@ -412,7 +412,8 @@ button,
     }
 
     #img1 {
-        margin-bottom: 300px;
+        margin-bottom: 75%;
+        /* margin-bottom: 300px; */
 
     }
 
@@ -422,16 +423,36 @@ button,
 
     .pro-footer {
         position: relative;
-        top: -230px;
+        top: -200px;
+        /* top: -40%; */
+
+
+        /* top: 30%; */
+        /* top: -230px; */
+    }
+
+    .pro-footer {
+        bottom: 0;
     }
 
     #contact {
         position: relative;
+        bottom: 0;
+        /* top: 10%; */
+        /* position: absolute; */
+        /* top: 80%; */
+        /* bottom: 50%; */
+        /* top: 50%; */
+        /* bottom: 0; */
         top: -230px;
 
         /* margin-bottom: 500px; */
         /* margin-top: 200px; */
 
+    }
+
+    body {
+        height: 100vh;
     }
 
 
